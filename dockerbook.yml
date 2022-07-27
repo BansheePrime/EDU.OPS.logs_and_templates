@@ -13,10 +13,12 @@
 
     - name: Install required packages.
       apt:
-        pkg:
-          - python3-docker
-          - docker.io
-          - docker-compose
+        name: "{{ item }}"
+        state: present
+      loop:
+        - python3-docker
+        - docker.io
+        - docker-compose
 
     - name: Adding user to docker group. NOT SAFE
       user:
