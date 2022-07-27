@@ -13,16 +13,16 @@
 
     - name: Install required packages.
       apt:
-        pkg:
-          - curl
-          - wget
-          - git
-          - yamllint
-          - python3-venv
-          - python3-pip
-          - ansible
-        state: latest
-        update_cache: true
+        name: "{{ item }}"
+        state: present
+      loop:
+        - curl
+        - wget
+        - git
+        - yamllint
+        - python3-venv
+        - python3-pip
+        - ansible
 
     - name: Upgrade packages.
       apt:
