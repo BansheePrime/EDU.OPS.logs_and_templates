@@ -1,0 +1,25 @@
+---
+- name: Updating Ubuntu 20.04 and docker installation.
+  hosts: all
+  become: true
+  gather_facts: false
+
+  tasks:
+    - name: Update apt cache.
+      apt:
+        update_cache: true
+        force_apt_get: true
+        cache_valid_time: 3600
+
+    - name: Install required packages.
+      apt:
+        pkg:
+          - python3-docker
+          - docker.io
+          - docker-compose
+
+    - name: Adding user to docker group. NOT SAFE
+      user:
+        name: vagrant
+        groups: docker
+        append: true
