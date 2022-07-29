@@ -19,9 +19,6 @@
         - curl
         - wget
         - git
-        - yamllint
-        - python3-venv
-        - python3-pip
         - ansible
 
     - name: Upgrade packages.
