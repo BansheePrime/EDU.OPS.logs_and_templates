@@ -16,13 +16,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Sword server
   config.vm.define "sword" do |sword|
     sword.vm.hostname = "sword.test"
-    sword.vm.network :private_network, ip: 192.168.62.12
+    sword.vm.network "private_network", ip: "192.168.62.12"
   end
 
   # Shield server
   config.vm.define "shield" do |shield|
     shield.vm.hostname = "shield.test"
-    shield.vm.network :private_network, ip: 192.168.62.13
+    shield.vm.network "private_network", ip: "192.168.62.13"
   end
 
 
