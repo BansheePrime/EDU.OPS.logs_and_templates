@@ -1,6 +1,6 @@
 ---
 - name: Lineinfile Examples
-  hosts: localhost
+  hosts: all
   tasks:
   - name:
     lineinfile:
