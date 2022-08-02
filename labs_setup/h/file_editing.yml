@@ -1,14 +1,15 @@
 ---
-- hosts: mirabar
+- hosts:
   tasks: Changing bash setup
-  - name: Increase bash history file size
-    ansible.builtin.lineinfile:
+
+- name:
+    lineinfile:
       path: ~/.bashrc
       regexp: '^HISTSIZE='
       line: HISTSIZE=5000
 
-  - name: Increase bash history file size
-    ansible.builtin.lineinfile:
+- name:
+    lineinfile:
       path: ~/.bashrc
       regexp: '^HISTFILESIZE='
       line: HISTFILESIZE=10000
