@@ -43,6 +43,9 @@ sudo apt install virtualbox
 wget https://download.virtualbox.org/virtualbox/6.1.38/Oracle_VM_VirtualBox_Extension_Pack-6.1.38.vbox-extpack
 sudo VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-6.1.38.vbox-extpack
 
+### Install Nginx on alpine box
+https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/
+
 
 ### DOC
 https://www.virtualbox.org/manual/ch02.html#install-linux-host
