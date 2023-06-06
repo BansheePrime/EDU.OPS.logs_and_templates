@@ -1,0 +1,6 @@
+<network>
+    <name>geekload</name>
+    <bridge name="vm-net08" stp="on" delay="0"/>
+    <mac address="7a:a7:88:37:cf:b2"/>
+    <domain name="geekload"/>
+</network>

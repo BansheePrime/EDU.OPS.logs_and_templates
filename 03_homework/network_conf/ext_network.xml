@@ -1,0 +1,15 @@
+<network>
+    <name>geeknet</name>
+    <forward mode="nat">
+        <nat>
+            <port start="1024" end="65535"/>
+        </nat>
+    </forward>
+    <bridge name="vm-net07" stp="on" delay="0"/>
+    <mac address="7a:5f:c2:7d:b2:44"/>
+    <ip address="172.28.0.9" netmask="255.255.255.248">
+        <dhcp>
+            <range start="172.28.0.10" end="172.28.0.14"/>
+        </dhcp>
+    </ip>
+</network>
