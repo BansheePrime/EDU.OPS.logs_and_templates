@@ -7,6 +7,8 @@ chmod -r 755 /var/www/cookie-research/
 
 # Update Nginx conf
 cp -rf ./cookie-research.conf /etc/nginx/sites-available/
+# Linking avail and enabled
+sudo ln -s /etc/nginx/sites-available/cookie-research.conf /etc/nginx/sites-enabled/
 
 # Tests
 # Test if directory exists
