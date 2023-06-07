@@ -1,0 +1,12 @@
+---
+- hosts: all
+  tasks:
+    - name: Print IP
+      debug:
+        msg: "IPv4 address: {{ ansible_default_ipv4.address }}"
+
+    - name: Package installation
+      apt:
+        name:
+          - git
+          - vim

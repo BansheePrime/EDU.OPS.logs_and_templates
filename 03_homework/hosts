@@ -1,0 +1,5 @@
+[local]
+localhost ansible_connection=local
+
+[lab]
+geek ansible_host=192.168.0.77 ansible_ssh_private_key_file=/home/gidra/.ssh/debi-vtt ansible_ssh_user=gidra
