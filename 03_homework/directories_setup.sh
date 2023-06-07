@@ -3,7 +3,7 @@ mkdir -p /var/www/cookie-research/html/
 cp -rf ./attacker1.html /var/www/cookie-research/html/
 cp -rf ./subattacker2.html /var/www/cookie-research/html/
 cp -rf ./subsubattacker3.html /var/www/cookie-research/html/
-chmod -R 755 /var/www/cookie-research/
+chmod -R 755 /var/www/cookie-research
 
 # Update Nginx conf
 cp -rf ./cookie-research.conf /etc/nginx/sites-available/
@@ -19,8 +19,14 @@ else
     echo "Error: Directory /var/www/cookie-research/ does not exists."
 fi
 # Test if html files set
-if [[ -f /var/www/cookie-research/html/subsubattacker3.html -a -f /var/www/cookie-research/html/subattacker2.html -a -f /var/www/cookie-research/html/attacker1.html]]; then
-    echo "DONE: Files set as wanted."
+if [ -f /var/www/cookie-research/html/subsubattacker3.html]; then
+    echo "DONE: File subsubattacker3.html set."
+fi
+if [ -f /var/www/cookie-research/html/subattacker2.html]; then
+    echo "DONE: File subattacker2.html set."
+fi
+if [ -f /var/www/cookie-research/html/attacker1.html]; then
+    echo "DONE: File attacker1.html set."
 fi
 # Test if nginx conf updated
 if [[ -f /etc/nginx/sites-available/cookie-research.conf]]; then
