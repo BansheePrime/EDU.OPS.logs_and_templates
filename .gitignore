@@ -1,6 +1,7 @@
 # USER part
 .vagrant/
 .vscode/
+gpg
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
