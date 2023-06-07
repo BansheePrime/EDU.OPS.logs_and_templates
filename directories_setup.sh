@@ -24,3 +24,6 @@ fi
 if [ -f /etc/nginx/sites-available/cookie-research.conf]; then
     echo "DONE: Nginx conf updated."
 fi
+echo " "
+echo "Do not forget to restart Nginx with: sudo systemctl restart nginx"
+echo " "
