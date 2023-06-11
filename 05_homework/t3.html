@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <!-- say in shell: 
 sudo cp -t /var/www/html/ ./array.json ./t3.html
- Sum of array.json is: 0[100-2114125]
 -->
 <html>
 <head>
@@ -18,17 +17,15 @@ sudo cp -t /var/www/html/ ./array.json ./t3.html
                 alert(xhr.status + ': ' + xhr.statusText);
             } else {
                 var source = JSON.parse(xhr.responseText);
-                let sourceElement = source.summe;
-                let x = JSON.stringify(sourceElement);
-                var summation = new Array();
-                summation = x.split(',');
+                var sourceElement = new Array;
+                sourceElement = source.summe;
                 
-                let totalSum = 0;
-                for (let i = 0; i < summation.length; i++) {
-                    totalSum += summation[i];
-                }
+                var sum = 0;
+                sourceElement.forEach( num => {
+                    sum += num;
+                })
 
-                alert(' Sum of array.json is: ' + totalSum);
+                alert('Sum of array elements is: ' + ' ' + sum)
             }
             }
         xhrSumme();
