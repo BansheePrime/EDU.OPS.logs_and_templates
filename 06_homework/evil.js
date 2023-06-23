@@ -1,1 +1,1 @@
-("I’m evil!")
+alert("I’m evil!")
