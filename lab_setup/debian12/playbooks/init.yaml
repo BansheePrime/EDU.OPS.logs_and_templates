@@ -1,0 +1,21 @@
+- name: Apps installation
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Apt update
+      ansible.builtin.apt:
+        update_cache: yes
+
+    - name: Install a list of packages
+      ansible.builtin.apt:
+        pkg:
+        - curl
+        - git
+        - nginx
+        - php8.2-fpm
+
+    - name: Update all packages to their latest version
+      ansible.builtin.apt:
+        name: "*"
+        state: latest
