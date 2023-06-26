@@ -3,7 +3,7 @@
     <script>
         function xhrGeek() {
             var xhr = new XMLHttpRequest();
-            xhr.open("GET", "secret.txt", false);
+            xhr.open("GET", "http://victim.com/secret.txt", false);
             xhr.send();
 
             if (xhr.status != 200) {
@@ -13,6 +13,6 @@
             }
         }
     </script>
-    <button onclick="xhrGeek">Load data</button>
+    <button onclick="xhrGeek()">Load data</button>
 </body>
 </html>
