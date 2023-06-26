@@ -1,0 +1,19 @@
+<head>
+<script>
+    localStorage.setItem("font_color", "red");
+    let x = localStorage.getItem("font_color");
+
+    function setDefaultColor() {
+        document.getElementById("welcome").style.color = "blue";
+    }
+
+    function changeColor() {
+        document.getElementById("welcome").style.color = x;
+    }
+</script>
+</head>
+<body>
+<h1 id="welcome"> Hello, Geek!</h1>
+<button type="button" onclick="setDefaultColor()">Set blue color</button>
+<button type="button" onclick="changeColor()">Use the color saved in local storage</button>
+</body>
