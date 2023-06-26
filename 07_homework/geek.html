@@ -1,0 +1,18 @@
+<!DOCTYPE html><html><head><title>Geek Document</title></head>
+<body>
+    <script>
+        function xhrGeek() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "secret.txt", false);
+            xhr.send();
+
+            if (xhr.status != 200) {
+                alert(xhr.status + ': ' + xhr.statusText);
+            } else {
+                alert(xhr.responseText);
+            }
+        }
+    </script>
+    <button onclick="xhrGeek">Load data</button>
+</body>
+</html>

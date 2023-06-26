@@ -6,6 +6,8 @@ sudo nginx -t && sudo systemctl restart nginx
 
 add_header "Set-Cookie" "geek_test=geek_attacker-com;";
 sudo cp ./07_homework/cookie_reader.php /var/www/html/
-
 sudo cp -R ./07_homework/cookie_reader.html /var/www/html/
+sudo cp -R ./07_homework/color_reader.html /var/www/html/
+
+###
 
