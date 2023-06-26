@@ -1,4 +1,31 @@
-<script>
-    localStorage.setItem("font_color", "red");
-    alert(localStorage.getItem("font_color"));
-</script>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Geek Document</title>
+</head>
+<body>
+    <script>
+        function xhrSumme() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "array.json", false);
+            xhr.send();
+
+            if (xhr.status != 200) {
+                alert(xhr.status + ': ' + xhr.statusText);
+            } else {
+                var source = JSON.parse(xhr.responseText);
+                var sourceElement = new Array;
+                sourceElement = source.summe;
+                
+                var sum = 0;
+                sourceElement.forEach( num => {
+                    sum += num;
+                })
+
+                alert('Sum of array elements is: ' + ' ' + sum)
+            }
+            }
+        xhrSumme();
+    </script>
+</body>
+</html>
