@@ -24,3 +24,8 @@ if ($request_method = 'GET') {
         add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS' always;
         }
 
+<?php header("Access-Control-Allow-Origin: http://victim.com"); ?>
+
+        const myHeader = new Headers();
+        myHeader.set("Access-Control-Allow-Origin", "*");
+
