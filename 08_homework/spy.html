@@ -1,0 +1,20 @@
+<!DOCTYPE html><html><head><title>Geek Spy Document</title>
+</head>
+<body>
+    <script>
+
+        function xhrGeek() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "http://localhost/user_info.html", false);
+            xhr.send();
+
+            if (xhr.status != 200) {
+                alert(xhr.status + ': ' + xhr.statusText);
+            } else {
+                alert(xhr.responseText);
+            }
+        }
+    </script>
+    <button onclick="xhrGeek()">Взломайте пользователя.</button>
+</body>
+</html>
