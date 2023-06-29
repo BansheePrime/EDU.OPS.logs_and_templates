@@ -1,0 +1,14 @@
+<!DOCTYPE html><html><head><title>Geek Document</title>
+</head>
+<body>
+    <script>
+
+        function recieveMessage() {
+            document.body.innerHTML = "<p>" + event.data + "</p>";
+
+        }
+        window.addEventListener("message", recieveMessage);
+    </script>
+
+</body>
+</html>

